@@ -1,0 +1,83 @@
+Tipo,Nome,Prezzo,Descrizione
+Visita,Visita di controllo,50, Nel nostro studio offriamo visite di controllo e pulizia professionale per mantenere la salute dei tuoi denti e gengive.
+Trattamento,Sbiancamento dentale professionale,150,Effettuiamo trattamenti di sbiancamento dentale professionale per un sorriso più luminoso e sano.
+Visita,Visita odontoiatrica specialistica,80,Prenota una visita odontoiatrica per valutare carie, gengiviti o per un check-up completo.
+Trattamento,Ortodonzia per adulti,1000,Offriamo trattamenti di ortodonzia per adulti con apparecchi tradizionali o trasparenti.
+Trattamento,Ortodonzia per bambini,900,Offriamo trattamenti di ortodonzia per bambini con apparecchi specifici per ogni età.
+Tecnologia,Tecnologia laser odontoiatrica,200,Il nostro team utilizza tecnologie all’avanguardia come il laser per interventi efficaci e meno invasivi.
+Visita,Igiene orale professionale,70,La pulizia dentale professionale rimuove placca e tartaro per gengive sane.
+Trattamento,Rimozione carie,120,Trattiamo la carie con tecniche moderne e materiali biocompatibili.
+Trattamento,Otturazione estetica,130,Effettuiamo otturazioni estetiche per recuperare la funzionalità e l’estetica del dente.
+Trattamento,Trattamento canalare,250,Trattiamo infezioni dentali con terapia canalare per salvare il dente.
+Visita,Consulenza ortodontica,60,Offriamo consulenze per valutare la necessità di trattamenti ortodontici.
+Trattamento,Implantologia dentale,1500,Realizziamo impianti dentali con materiali di alta qualità.
+Tecnologia,Radiografia digitale,100,Utilizziamo radiografie digitali per diagnosi precise e rapide.
+Trattamento,Protesi dentale,800,Realizziamo protesi dentali personalizzate.
+Trattamento,Estrazione dentale,90,Effettuiamo estrazioni dentali rapide e indolori.
+Visita,Check-up completo,90,Prenota un check-up completo per la salute orale generale.
+Trattamento,Applicazione sigillante,70,Applichiamo sigillanti dentali per prevenire le carie nei bambini.
+Trattamento,Trattamento parodontale,300,Trattiamo le malattie gengivali con terapie mirate.
+Trattamento,Sbiancamento lampada LED,180,Trattamento di sbiancamento con lampada LED per risultati rapidi.
+Tecnologia,Scanner intraorale,250,Usiamo scanner intraorali per impronte digitali precise.
+Trattamento,Faccette dentali,600,Realizziamo faccette estetiche per migliorare il sorriso.
+Trattamento,Chirurgia orale,1200,Interventi di chirurgia orale eseguiti in sicurezza.
+Visita,Valutazione estetica,70,Valutiamo l’estetica del sorriso per piani di trattamento personalizzati.
+Trattamento,Riparazione dentale,100,Ripariamo denti danneggiati con materiali avanzati.
+Trattamento,Trattamento sensibilità dentale,110,Trattiamo la sensibilità dentale per migliorare il comfort.
+Tecnologia,Telecamere intraorali,200,Utilizziamo telecamere per diagnosi dettagliate.
+Trattamento,Rimozione tartaro,80,La rimozione del tartaro è fondamentale per la salute gengivale.
+Visita,Consulenza implantologica,90,Consulenza specialistica per impianti dentali.
+Trattamento,Trattamento ortodontico invisibile,1200,Offriamo apparecchi ortodontici invisibili per adulti.
+Trattamento,Trattamento gengivite,150,Terapie specifiche per la gengivite.
+Trattamento,Ripristino estetico dentale,200,Restauri estetici per migliorare l’aspetto dei denti.
+Visita,Monitoraggio post-operatorio,50,Monitoriamo i pazienti dopo interventi chirurgici.
+Trattamento,Rimozione macchie dentali,90,Trattamenti professionali per eliminare macchie.
+Tecnologia,Anestesia computerizzata,180,Tecnologia per anestesia precisa e meno dolorosa.
+Trattamento,Trattamento per bruxismo,130,Trattiamo il bruxismo con bite personalizzati.
+Visita,Consulenza igiene orale,60,Consigli personalizzati per migliorare l’igiene orale.
+Trattamento,Fluorizzazione dentale,70,Trattamenti di fluorizzazione per rinforzare lo smalto.
+Tecnologia,Sedazione cosciente,300,Tecnica per ridurre ansia e dolore durante cure dentali.
+Trattamento,Trattamento di emergenza,100,Interventi rapidi in caso di emergenze odontoiatriche.
+Dentifricio,Dentifricio FreshSmile,4.99,Il dentifricio FreshSmile è indicato per la protezione quotidiana dei denti e per prevenire la formazione della placca.
+Spazzolino,Spazzolino ProClean Elettrico,29.90,Lo spazzolino ProClean è ideale per una pulizia efficace e delicata delle gengive.
+Collutorio,Collutorio MintFresh,6.50,Il collutorio MintFresh aiuta a mantenere un alito fresco e a ridurre l’infiammazione gengivale.
+KitSbiancante,Kit WhiteBright,25.00,Kit sbiancante professionale per uso domiciliare, facile e sicuro.
+FiloInterdentale,Filo SilkFloss,3.20,Filo interdentale extra sottile per pulire a fondo tra i denti.
+Spazzolino,Spazzolino SoftBrush Manuale,3.80,Spazzolino a setole morbide indicato per gengive sensibili.
+CremaProtezione,Gel Protettivo Gengive,8.50,Gel lenitivo per gengive irritate e sensibili.
+Accessori,Specchietto Odontoiatrico,7.00,Specchietto per ispezione visiva della cavità orale.
+Spazzolino,Spazzolino UltraClean Elettrico,34.50,Spazzolino con diverse modalità di pulizia per ogni esigenza.
+Collutorio,Collutorio AloeVera,5.90,Collutorio che idrata le mucose e riduce il fastidio gengivale.
+Dentifricio,Dentifricio KidsSmile,3.50,Dentifricio per bambini con sapore delicato e protezione completa.
+KitSbiancante,Strisce Sbiancanti SmilePro,18.00,Strisce per sbiancamento rapido e sicuro dei denti.
+FiloInterdentale,Filo Aromatizzato FreshMint,3.90,Filo interdentale con aroma di menta per una sensazione di freschezza.
+CremaProtezione,Crema Riparatrice Smalto,9.00,Crema che aiuta a rinforzare e proteggere lo smalto dentale.
+Accessori,Custodia Porta Spazzolino,4.50,Custodia igienica per trasporto e conservazione dello spazzolino.
+Dentifricio,Dentifricio SensitivePlus,6.00,Dentifricio per denti sensibili che riduce il fastidio.
+Spazzolino,Spazzolino Junior,4.00,Spazzolino con testina piccola e setole morbide per bambini.
+Collutorio,Collutorio HerbalCare,7.20,Collutorio con estratti naturali per favorire la salute delle gengive.
+KitSbiancante,Penna Sbiancante WhiteTouch,15.50,Penna per sbiancamento localizzato e facile da applicare.
+FiloInterdentale,Filo EcoBio,3.70,Filo interdentale biodegradabile per un’igiene sostenibile.
+CremaProtezione,Gel AntiPlacca,8.80,Gel per prevenire la formazione della placca e mantenere gengive sane.
+Accessori,Pinzette Odontoiatriche,12.00,Pinzette professionali per manovre di precisione in studio.
+Dentifricio,Dentifricio WhiteningPlus,5.99,Dentifricio sbiancante per rimuovere macchie superficiali.
+Spazzolino,Spazzolino NanoTech Manuale,8.00,Spazzolino con setole nanotecnologiche per pulizia profonda.
+Collutorio,Collutorio FreshMint,6.00,Collutorio che assicura un alito fresco a lunga durata.
+KitSbiancante,Kit Sbiancante ProCare,30.00,Kit completo per sbiancamento professionale a casa.
+FiloInterdentale,Filo Premium Glide,4.20,Filo scorrevole e resistente per una pulizia efficace.
+CremaProtezione,Crema Lenitiva Gengive,7.50,Crema per alleviare irritazioni e infiammazioni gengivali.
+Accessori,Spazzolino Interdentale,6.00,Spazzolino per la pulizia tra i denti e apparecchi ortodontici.
+Dentifricio,Dentifricio GumCare,6.40,Dentifricio formulato per rinforzare le gengive.
+Spazzolino,Spazzolino PowerBrush Elettrico,39.90,Spazzolino con sensore di pressione per pulizia avanzata.
+Collutorio,Collutorio SensitiveFresh,6.20,Collutorio che calma le gengive sensibili.
+KitSbiancante,Strisce Sbiancanti EasyWhite,20.00,Strisce sbiancanti ad azione rapida e delicata.
+FiloInterdentale,Filo Interdentale UltraFine,3.60,Filo extra sottile per spazi ridotti.
+CremaProtezione,Gel Alginato Impronte,10.00,Gel per impronte dentali in studio.
+Accessori,Specchietto Digitale per Esami,150.00,Specchietto digitale con illuminazione LED per diagnosi.
+Dentifricio,Dentifricio AntiPlaque,5.80,Dentifricio che riduce la formazione della placca.
+Spazzolino,Spazzolino EcoFriendly,4.50,Spazzolino biodegradabile realizzato con materiali ecologici.
+Collutorio,Collutorio CitrusFresh,6.00,Collutorio che dona freschezza e igiene orale.
+KitSbiancante,Kit Sbiancante UltraWhite,28.00,Kit con formula avanzata per denti più bianchi.
+FiloInterdentale,Filo Aromatizzato Citrus,3.80,Filo interdentale con aroma agrumato.
+CremaProtezione,Crema Riparatrice Smalto Plus,9.50,Crema rinforzante per lo smalto con calcio e fluoruro.
+Accessori,Custodia Porta Spazzolino Deluxe,6.00,Custodia elegante per spazzolini elettrici e manuali.
