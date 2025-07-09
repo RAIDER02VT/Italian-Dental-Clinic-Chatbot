@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./chat.css";
+import "./dentistChat.css";
 import logo from "./assets/logo.png";
 
 interface Risposta {
@@ -7,16 +7,15 @@ interface Risposta {
   risposta: string;
 }
 
-// ✅ Frasi di attesa dinamiche
 const frasiAttesa = [
-  "🏗️ Sto controllando i dati dei materiali...",
-  "🤖 Un attimo che elaboro la risposta...",
-  "🧱 Recupero le informazioni sui prodotti richiesti...",
-  "🧮 Analizzo le tue esigenze tecniche...",
-  "🛠️ Sto preparando una risposta dettagliata...",
-  "🕐 Un momento, ti rispondo subito...",
-  "🧰 Consulto i dati tecnici aggiornati...",
-  "🔍 Sto cercando i dettagli più rilevanti per te...",
+  "🦷 Sto controllando i dati dei trattamenti...",
+  "😷 Un attimo che elaboro la risposta...",
+  "📋 Recupero le informazioni sui servizi richiesti...",
+  "🔍 Analizzo le tue esigenze dentali...",
+  "💬 Sto preparando una risposta precisa...",
+  "⏳ Un momento, ti rispondo subito...",
+  "📄 Consulto i dettagli clinici aggiornati...",
+  "🦷 Cerco i dettagli più adatti per te...",
 ];
 
 const App: React.FC = () => {
@@ -25,7 +24,6 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [fraseAttesa, setFraseAttesa] = useState("");
 
-  // ✅ Ref per scroll automatico
   const endOfChatRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToBottom = () => {
@@ -85,7 +83,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const messaggioIniziale = {
-      risposta: "Ciao! Sono l'assistente virtuale Marinetti. Se hai dubbi su come utilizzare un prodotto o vuoi informazioni tecniche, scrivimi qui: ti aiuto volentieri a capire meglio.",
+      risposta: "Ciao! Sono il tuo assistente dentale digitale SmileCare. Se hai dubbi su trattamenti, costi o prevenzione, scrivimi pure: sono qui per aiutarti!",
     };
     setRisposte([messaggioIniziale]);
   }, []);
@@ -93,25 +91,24 @@ const App: React.FC = () => {
   return (
     <div className="chat-container">
       <div className="header">
-        <img src={logo} alt="Marinetti Logo" className="logo" />
-        <h1>Marinetti Edilizia – Assistente Virtuale</h1>
+        <img src={logo} alt="SmileCare Logo" className="logo" />
+        <h1>SmileCare – Assistente Dentistico Virtuale</h1>
       </div>
 
       <div className="chat-box">
         {risposte.map((r, i) => (
           <div key={i} className="msg-block">
-            {r.domanda && <div className="msg-user">🙋 {r.domanda}</div>}
+            {r.domanda && <div className="msg-user">🧑‍⚕️ {r.domanda}</div>}
             <div className="msg-bot">{r.risposta}</div>
           </div>
         ))}
-        {/* 🔽 Punto di scroll automatico */}
         <div ref={endOfChatRef} />
       </div>
 
       <div className="input-row">
         <input
           type="text"
-          placeholder="Scrivi la tua domanda..."
+          placeholder="Scrivi la tua domanda sui trattamenti dentali..."
           value={domanda}
           onChange={(e) => setDomanda(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && inviaDomanda()}
@@ -126,3 +123,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

@@ -4,6 +4,7 @@ import os
 import platform
 from openai import OpenAI
 from config import GPT_API_KEY, CHROMA_DB_DIRECTORY, CHROMA_COLLECTION_NAME
+
 # Fix per Codespaces: forza sqlite aggiornato solo se serve
 if "CODESPACES" in os.environ or platform.system() != "Windows":
     try:
