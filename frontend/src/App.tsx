@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./dentistChat.css";
+import "./App.css";
 import logo from "./assets/logo.png";
 
 interface Risposta {
