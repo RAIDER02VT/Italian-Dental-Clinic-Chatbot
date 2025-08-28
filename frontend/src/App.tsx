@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import ReactMarkdown from 'react-markdown';
 import "./App.css";
 import logo from "./assets/logo.png";
 
@@ -83,7 +84,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const messaggioIniziale = {
-      risposta: "Ciao! Sono il tuo assistente dentale digitale SmileCare. Se hai dubbi su trattamenti, costi o prevenzione, scrivimi pure: sono qui per aiutarti!",
+      risposta: "Ciao! Sono l'assistente di **Sileoni Dental**. Se hai dubbi su trattamenti, costi o prevenzione, scrivimi pure: sono qui per aiutarti!",
     };
     setRisposte([messaggioIniziale]);
   }, []);
@@ -91,15 +92,17 @@ const App: React.FC = () => {
   return (
     <div className="chat-container">
       <div className="header">
-        <img src={logo} alt="SmileCare Logo" className="logo" />
-        <h1>SmileCare – Assistente Dentistico Virtuale</h1>
+        <img src={logo} alt="Sileoni Dental Logo" className="logo" />
+        <h1>Sileoni Dental – Assistente Virtuale</h1>
       </div>
 
       <div className="chat-box">
         {risposte.map((r, i) => (
           <div key={i} className="msg-block">
             {r.domanda && <div className="msg-user">🧑‍⚕️ {r.domanda}</div>}
-            <div className="msg-bot">{r.risposta}</div>
+            <div className="msg-bot">
+              <ReactMarkdown>{r.risposta}</ReactMarkdown>
+            </div>
           </div>
         ))}
         <div ref={endOfChatRef} />
@@ -123,4 +126,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

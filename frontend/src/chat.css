@@ -62,6 +62,50 @@ h1 {
   border-radius: 6px;
 }
 
+/* Stili Markdown per le risposte dell'assistente */
+.msg-bot h3 {
+  font-size: 1.1em;
+  margin: 0.5rem 0 0.3rem 0;
+  color: #005299;
+}
+
+.msg-bot ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.msg-bot li {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+.msg-bot p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.msg-bot strong {
+  color: #005299;
+  font-weight: 600;
+}
+
+.msg-bot code {
+  background: #f0f8ff;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* Emoticon e simboli */
+.msg-bot p:first-child {
+  margin-top: 0;
+}
+
+.msg-bot p:last-child {
+  margin-bottom: 0;
+}
+
 .input-row {
   display: flex;
   gap: 0.5rem;
