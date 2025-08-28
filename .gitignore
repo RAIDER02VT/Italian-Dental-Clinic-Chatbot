@@ -1,0 +1,21 @@
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# --- Virtual env ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- DB / cache locali ---
+*.sqlite3
+*.db
+backend/chroma_db_*/
+chroma_db_*/
+
+# --- Config locali ---
+*.env
+.env.*

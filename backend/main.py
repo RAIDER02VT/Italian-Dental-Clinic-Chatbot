@@ -7,7 +7,7 @@ from app.routes.chat import router as chat_route
 
 app = FastAPI(
     title="Chat Assistente Edile",
-    description="API per assistente virtuale Marinetti Edilizia",
+    description="API per assistente virtuale Sileoni Dental",
     version="1.0.0"
 )
 
