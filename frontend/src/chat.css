@@ -211,3 +211,20 @@ button:disabled {
   padding: 0 !important;
   color: inherit !important;
 }
+/* preserva i newline come <br/> nel testo renderizzato */
+.msg-bot {
+  white-space: pre-line;       /* fallback se manca remark-breaks */
+  word-break: break-word;      /* evita overflow su parole lunghe/URL */
+}
+
+/* neutralizza stile "code block" */
+.msg-bot pre,
+.msg-bot code {
+  background: none !important;
+  border: none !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  color: inherit !important;
+  white-space: normal !important;
+}

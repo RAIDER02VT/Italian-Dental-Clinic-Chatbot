@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
 import "./App.css";
 import logo from "./assets/logo.png";
 
@@ -20,18 +22,18 @@ const frasiAttesa = [
 ];
 
 /** Normalizza il testo del bot:
- * - rimuove triple backtick ``` ... ```
- * - rimuove indentazioni che creano code block
- * - compatta spazi/righe spurie
+ * - rimuove ``` triple backtick
+ * - rimuove indentazioni da code-block
+ * - compatta righe vuote multiple
  */
 function normalizeBotText(input: string): string {
   if (!input) return "";
-  let out = input.replace(/```[\s\S]*?```/g, (m) => m.replace(/```/g, "")); // togli i delimitatori, conserva il contenuto
+  let out = input.replace(/```[\s\S]*?```/g, (m) => m.replace(/```/g, ""));
   out = out.replace(/\r/g, "");
-  out = out.replace(/^\s{4,}/gm, "");        // niente indentazione da code-block
-  out = out.replace(/\n[ \t]+/g, "\n");      // toglie spazi dopo newline
-  out = out.replace(/[ \t]+\n/g, "\n");      // toglie spazi prima di newline
-  out = out.replace(/\n{3,}/g, "\n\n");      // max 2 newline di fila
+  out = out.replace(/^\s{4,}/gm, "");   // niente indentazione che crea <pre>
+  out = out.replace(/\n[ \t]+/g, "\n"); // spazi dopo newline
+  out = out.replace(/[ \t]+\n/g, "\n"); // spazi prima di newline
+  out = out.replace(/\n{3,}/g, "\n\n"); // max 2 newline consecutivi
   return out.trim();
 }
 
@@ -54,7 +56,7 @@ const App: React.FC = () => {
     const domandaTrim = domanda.trim();
     if (!domandaTrim || loading) return;
 
-    // messaggio di attesa ottimistico
+    // Mostra subito la frase di attesa (unico loader)
     const frase = frasiAttesa[Math.floor(Math.random() * frasiAttesa.length)];
     setRisposte((prev) => [...prev, { domanda: domandaTrim, risposta: frase }]);
     setDomanda("");
@@ -83,7 +85,6 @@ const App: React.FC = () => {
       }
 
       const data = await res.json();
-
       const rispostaPulita = normalizeBotText(String(data.risposta ?? ""));
 
       setRisposte((prev) => {
@@ -133,16 +134,14 @@ const App: React.FC = () => {
             {r.domanda && <div className="msg-user">🧑‍⚕️ {r.domanda}</div>}
             <div className="msg-bot">
               <ReactMarkdown
-                // Disabilita i blocchi di codice: rendi solo testo
+                remarkPlugins={[remarkGfm, remarkBreaks]}
                 components={{
                   code({ inline, children, ...props }) {
-                    if (inline) {
-                      return <code {...props}>{children}</code>;
-                    }
+                    if (inline) return <code {...props}>{children}</code>;
+                    // niente <pre>, niente box grigi
                     return <span {...props}>{children}</span>;
                   },
                   pre({ children }) {
-                    // Evita <pre> che crea box grigi
                     return <>{children}</>;
                   },
                 }}
@@ -152,7 +151,6 @@ const App: React.FC = () => {
             </div>
           </div>
         ))}
-        {loading && <div className="msg-bot">⌛ Sto scrivendo…</div>}
         <div ref={endOfChatRef} />
       </div>
 
