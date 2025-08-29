@@ -146,3 +146,31 @@ button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
+
+/* --- FONT SIZE CHAT (override finale) --- */
+.chat-box { 
+  font-size: 16px; 
+  line-height: 1.55;
+}
+
+/* titoli Markdown più leggibili */
+.msg-bot h1, .msg-bot h2, .msg-bot h3, .msg-bot h4 {
+  line-height: 1.25;
+  margin: 8px 0 6px;
+  font-weight: 700;
+}
+
+/* h3 usato da ### */
+.msg-bot h3 { 
+  font-size: clamp(1.125rem, 2.4vw, 1.25rem); /* ~18–20px */
+}
+
+/* testo base nelle risposte */
+.msg-bot p, .msg-bot li {
+  font-size: 1rem;           /* 16px */
+}
+
+/* opzionale: su mobile aumenta appena */
+@media (max-width: 480px) {
+  .chat-box { font-size: 17px; }
+}
