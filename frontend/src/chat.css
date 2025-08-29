@@ -174,3 +174,31 @@ button:disabled {
 @media (max-width: 480px) {
   .chat-box { font-size: 17px; }
 }
+
+.msg-bot {
+  background: #e0f0ff;
+  color: #222;
+  padding: 0.75rem;
+  border-left: 4px solid #007acc;
+  border-radius: 6px;
+
+  font-size: 1rem;         /* fisso: 16px */
+  line-height: 1.55;
+}
+
+.msg-bot strong {
+  color: #005299;
+  font-weight: bold;
+  background: none;        /* elimina effetto evidenziatore */
+  text-decoration: none;   /* elimina eventuali sottolineature */
+}
+
+.msg-bot h1, 
+.msg-bot h2, 
+.msg-bot h3, 
+.msg-bot h4 {
+  font-size: 1.1rem;   /* uguale al resto, così non sballa */
+  font-weight: 600;
+  margin: 6px 0;
+  color: #005299;
+}
