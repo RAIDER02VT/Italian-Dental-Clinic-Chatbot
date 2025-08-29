@@ -228,3 +228,47 @@ button:disabled {
   color: inherit !important;
   white-space: normal !important;
 }
+
+/* Spaziatura compatta nel messaggio bot */
+.msg-bot {
+  line-height: 1.45;         /* più denso ma leggibile */
+  white-space: normal;       /* usiamo remark-breaks, niente pre-line */
+}
+
+/* Paragrafi markdown */
+.msg-bot p {
+  margin: 0.15rem 0;         /* era troppo ampio */
+}
+
+/* Titoli markdown (Dettagli / Prossimi passi) */
+.msg-bot h1, .msg-bot h2, .msg-bot h3, .msg-bot h4 {
+  margin: 0.25rem 0 0.2rem;  /* compatto */
+  font-weight: 700;
+}
+
+/* Liste più serrate */
+.msg-bot ul, .msg-bot ol {
+  margin: 0.2rem 0 0.2rem 1.2rem;
+  padding: 0;
+}
+.msg-bot li {
+  margin: 0.1rem 0;
+}
+
+/* Elimina paragrafi vuoti eventualmente generati */
+.msg-bot p:empty {
+  display: none;
+}
+
+/* Neutralizza box grigi di codice (già fatto ma lo ribadiamo) */
+.msg-bot pre, .msg-bot code {
+  background: none !important;
+  border: none !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  color: inherit !important;
+  white-space: normal !important;
+  word-break: break-word;
+}
+

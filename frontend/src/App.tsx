@@ -30,12 +30,13 @@ function normalizeBotText(input: string): string {
   if (!input) return "";
   let out = input.replace(/```[\s\S]*?```/g, (m) => m.replace(/```/g, ""));
   out = out.replace(/\r/g, "");
-  out = out.replace(/^\s{4,}/gm, "");   // niente indentazione che crea <pre>
-  out = out.replace(/\n[ \t]+/g, "\n"); // spazi dopo newline
-  out = out.replace(/[ \t]+\n/g, "\n"); // spazi prima di newline
-  out = out.replace(/\n{3,}/g, "\n\n"); // max 2 newline consecutivi
+  out = out.replace(/^\s{4,}/gm, "");                 // niente indentazione da <pre>
+  out = out.replace(/\n[ \t]+/g, "\n");               // spazi dopo newline
+  out = out.replace(/[ \t]+\n/g, "\n");               // spazi prima di newline
+  out = out.replace(/\n[ \t]*\n[ \t]*\n+/g, "\n\n");  // collassa 3+ righe vuote in 1 vuota
   return out.trim();
 }
+
 
 const App: React.FC = () => {
   const [domanda, setDomanda] = useState("");
