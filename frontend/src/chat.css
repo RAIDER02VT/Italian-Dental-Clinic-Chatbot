@@ -202,3 +202,12 @@ button:disabled {
   margin: 6px 0;
   color: #005299;
 }
+/* impedisce che i blocchi vengano evidenziati */
+.msg-bot pre, .msg-bot code {
+  background: none !important;
+  border: none !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
