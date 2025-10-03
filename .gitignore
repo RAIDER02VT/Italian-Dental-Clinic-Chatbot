@@ -19,3 +19,9 @@ chroma_db_*/
 # --- Config locali ---
 *.env
 .env.*
+
+# Vector store & DB locali
+backend/.vectorstore/
+backend/chroma_db_*/
+backend/dev.db
+backend/*.sqlite3

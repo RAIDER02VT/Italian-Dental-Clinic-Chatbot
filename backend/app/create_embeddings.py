@@ -1,3 +1,4 @@
+# backend/app/create_embeddings.py
 import pandas as pd
 import sys
 import os
@@ -5,15 +6,14 @@ import platform
 from openai import OpenAI
 from app.config import GPT_API_KEY, CHROMA_DB_DIRECTORY, CHROMA_COLLECTION_NAME
 
-# Fix per Codespaces: forza sqlite aggiornato solo se serve
+# Fix per Codespaces / linux slim
 if "CODESPACES" in os.environ or platform.system() != "Windows":
     try:
         __import__('pysqlite3')
         sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
     except ImportError:
         print("Modulo pysqlite3 non trovato, proseguo con sqlite3 standard")
-# Ora puoi importare chromadb
-import chromadb
+
 import chromadb
 from chromadb.config import Settings
 from tqdm import tqdm
@@ -30,12 +30,16 @@ def create_chroma_collection():
 
     # Carica CSV
     df = pd.read_csv(csv_path, sep=";", header=None, names=["frase"])
-    df = df.dropna(subset=["frase"]) 
+    df = df.dropna(subset=["frase"])
     df = df[df["frase"].str.strip() != ""]
     frasi = df["frase"].tolist()
 
     # Inizializza ChromaDB
-    chroma_client = chromadb.PersistentClient(path=CHROMA_DB_DIRECTORY)
+    Path(CHROMA_DB_DIRECTORY).mkdir(parents=True, exist_ok=True)
+    chroma_client = chromadb.PersistentClient(
+        path=str(CHROMA_DB_DIRECTORY),
+        settings=Settings(anonymized_telemetry=False),
+    )
     collection = chroma_client.get_or_create_collection(name=CHROMA_COLLECTION_NAME)
 
     # Parametro batch
@@ -49,8 +53,7 @@ def create_chroma_collection():
         try:
             response = client.embeddings.create(
                 input=batch,
-                model="text-embedding-3-small",
-                dimensions=768
+                model="text-embedding-3-small",   # niente dimensions
             )
             embeddings = [r.embedding for r in response.data]
 
@@ -67,10 +70,12 @@ def create_chroma_collection():
     return collection
 
 def get_chroma_collection():
-    chroma_client = chromadb.PersistentClient(path=CHROMA_DB_DIRECTORY)
+    chroma_client = chromadb.PersistentClient(
+        path=str(CHROMA_DB_DIRECTORY),
+        settings=Settings(anonymized_telemetry=False),
+    )
     return chroma_client.get_or_create_collection(name=CHROMA_COLLECTION_NAME)
 
-# Questo codice viene eseguito **solo se lanci direttamente questo file**
 if __name__ == "__main__":
     if not Path(CHROMA_DB_DIRECTORY).exists():
         create_chroma_collection()
